@@ -46,12 +46,12 @@ public class healthBar extends Actor
      * Draws a white rectangle around the health bar and fills it with a red color.
      */
     public void update(){
-        setImage(new GreenfootImage(healthBarWidth + 2, healthBarHeight + 2));  // Set image size
-        GreenfootImage myImage = getImage();  // Get the image of the actor
-        myImage.setColor(Color.WHITE);  // Set color to white
-        myImage.drawRect(0, 0, healthBarWidth + 1, healthBarHeight + 1);  // Draw a white rectangle
-        myImage.setColor(Color.RED);  // Set color to red
-        myImage.fillRect(1, 1, health * pixelsPerHealth, healthBarHeight);  // Fill the health bar with red based on current health
+        setImage(new GreenfootImage(healthBarWidth + 2, healthBarHeight + 2));  
+        GreenfootImage myImage = getImage();  
+        myImage.setColor(Color.WHITE);  
+        myImage.drawRect(0, 0, healthBarWidth + 1, healthBarHeight + 1);  
+        myImage.setColor(Color.RED);  
+        myImage.fillRect(1, 1, health * pixelsPerHealth, healthBarHeight);  
     }
 
     /**
