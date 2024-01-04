@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import greenfoot.Color; // Import Color class from Greenfoot
 /**
  * Represents a health bar for UFO & UFO2 in Mission 1 & 2.
  * 
