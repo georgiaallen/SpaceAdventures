@@ -125,7 +125,7 @@ public class UFO2 extends Actor
     }
 
     /**
-     * Create gravity effect by making the UFO fall.
+     * Create gravity effect by making UFO2 fall.
      */
     public void fall() {
         setLocation(getX(), getY() + vSpeed);
