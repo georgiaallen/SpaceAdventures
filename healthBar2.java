@@ -9,7 +9,7 @@ import greenfoot.Color; // Import Color class from Greenfoot
 public class healthBar2 extends Actor
 {
     // Instance variables
-    private int health = 5;  // Set health of UFO & UFO2
+    private int health = 5;  // Set health for UFO & UFO2
     int healthBarWidth = 100;  // Width of the health bar
     int healthBarHeight = 17;  // Height of the health bar
     int pixelsPerHealth = (int)healthBarWidth/health;  // Pixels per health point
