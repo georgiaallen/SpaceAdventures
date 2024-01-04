@@ -20,8 +20,8 @@ public class healthBar extends Actor
      * Initializes health to 5 and calls the update method.
      */
     public healthBar(){
-        health = 5;  // Initialize health
-        update();  // Call the update method to set up the initial appearance
+        health = 5;  
+        update();  
     }
 
     /**
