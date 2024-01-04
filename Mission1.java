@@ -12,11 +12,7 @@ public class Mission1 extends World
     {    
         super(3000, 700, 1);//screen size
     }
-    public void prepare(){
-        Introduction introduction = new Introduction();
-        addObject(introduction,0,0);//intro screen using introduction class
-        
-    }
+    
     public void act(){
         if(Greenfoot.isKeyDown("space")){
         Greenfoot.setWorld(new MyWorld());//when player presses space this will move screen to MyWorld so Mission 1 gameplay can commence
