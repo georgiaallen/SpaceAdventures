@@ -1,16 +1,16 @@
-import greenfoot.*;  // Import necessary Greenfoot classes
+import greenfoot.*;  // // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import greenfoot.Color;  // Import Color class from Greenfoot
 
 /**
- * Represents a health bar for an actor in the Greenfoot environment.
+ * Represents a health bar for astronaut & astronaut2 in the Mission 1 & 2.
  * 
- * Author: (Your name)
- * Version: (A version number or a date)
+ * Author: (Georgia)
+ * 
  */
 public class healthBar extends Actor 
 {
     // Instance variables
-    private int health = 5;  // Current health of the actor
+    private int health = 5;  // Set health for astronaut & astronaut2
     int healthBarWidth = 100;  // Width of the health bar
     int healthBarHeight = 17;  // Height of the health bar
     int pixelsPerHealth = (int)healthBarWidth/health;  // Pixels per health point
