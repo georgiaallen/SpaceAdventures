@@ -24,7 +24,7 @@ public class healthBar2 extends Actor
     }
 
     /**
-     * Act method - called whenever the 'Act' or 'Run' button gets pressed in the environment.
+     * 
      * Updates the health bar and checks for keyboard input to move the object to create a scrolling effect
      */
     public void act()
