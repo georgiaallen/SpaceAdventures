@@ -17,12 +17,12 @@ public class StartScreen extends World
     }
 
     /**
-     * Prepare method adds the Introduction object to the world.
+     * Prepare method adds the introduction class to the world.
      * 
      */
     public void prepare(){
         Introduction introduction = new Introduction();
-        addObject(introduction, 0, 0);  // Add the Introduction object to the world at coordinates (0,0)
+        addObject(introduction, 0, 0);  
     }
 
     /**
