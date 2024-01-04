@@ -13,11 +13,7 @@ public class Mission2 extends World
     {    
         super(3000, 700, 1);//screen size
     }
-    public void prepare(){
-        Introduction introduction = new Introduction();
-        addObject(introduction,0,0);//intro screen using introduction class
-        
-    }
+    
     public void act(){
         if(Greenfoot.isKeyDown("enter")){
         Greenfoot.setWorld(new MyWorld2());//when player presses enter this will move screen to MyWorld2 so Mission 2 gameplay can commence
