@@ -1,14 +1,20 @@
-import greenfoot.*;  
+import greenfoot.*;
+
 /**
- *You win screen for UFO and UFO2 actors
+ * Represents a "You Win" screen for UFO and UFO2 actors.
  * 
- * @author (your name) 
  * 
+ * Author: (Georgia)
  */
 public class YouWin2 extends World
 {
+    /**
+     * Constructor for YouWin2 class.
+     * Sets up the "You Win" screen with a specified size.
+     *
+     */
     public YouWin2()
     {    
-        super(3000, 700, 1); //screen size
+        super(3000, 700, 1); // Set the screen size with width 3000, height 700, and 1 cell
     }
 }
