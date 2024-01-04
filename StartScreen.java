@@ -15,16 +15,7 @@ public class StartScreen extends World
     {    
         super(3000, 700, 1);  // Set the world size
     }
-
-    /**
-     * Prepare method adds the introduction class to the world.
-     * 
-     */
-    public void prepare(){
-        Introduction introduction = new Introduction();
-        addObject(introduction, 0, 0);  
-    }
-
+    
     /**
      * 
      * Checks if the "enter" key is pressed.
