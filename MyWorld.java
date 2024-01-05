@@ -1,9 +1,9 @@
-import greenfoot.*;  
+import greenfoot.*;  //(World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
 /**
  * Class for Mission 1 gameplay
  * 
- * @author (Georgia) 
- * @version (a version number or a date)
+ * Author: Libby
  */
 public class MyWorld extends World {
     public healthBar healthbar; //healthabar institiated here so can be referenced in astronaut class
@@ -15,10 +15,6 @@ public class MyWorld extends World {
         prepare();
         populate();
         populate2();
-        
-
-        
-        
     }
 
     public healthBar getheHealthBar() {
