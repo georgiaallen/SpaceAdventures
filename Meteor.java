@@ -7,7 +7,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * 
  * Author: Libby 
  */
-
 public class Meteor extends Actor
 {
     /**
