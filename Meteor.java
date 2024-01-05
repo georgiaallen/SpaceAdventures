@@ -1,11 +1,11 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  // Import necessary Greenfoot classes
 
 /**
- * Write a description of class Meteor here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Meteor class represents a meteor in the Greenfoot scenario.
+ * This class extends the Actor class, which is the base class for all actors in Greenfoot.
+ * It means that objects of the Meteor class can be added to the world and will be displayed.
  */
+
 public class Meteor extends Actor
 {
     /**
@@ -14,18 +14,27 @@ public class Meteor extends Actor
      */
     public void act()
     {
-        
+        // Check if the right arrow key is pressed
         if(Greenfoot.isKeyDown("right"))
         {
+            // Move the meteor to the left (negative x direction)
             move(-4);
         }
+        
+        // Check if the left arrow key is pressed
         if(Greenfoot.isKeyDown("left"))
         {
+            // Move the meteor to the right (positive x direction)
             move(4);
         }
+        
+        // Check if the meteor has reached the left edge of the world
         if (getX() == 0)
         {
-            setLocation(getWorld().getWidth()-1, Greenfoot.getRandomNumber(365)+100);
-}}}
+            // Wrap around to the right edge and reposition vertically with a random Y-coordinate
+            setLocation(getWorld().getWidth() - 1, Greenfoot.getRandomNumber(365) + 100);
+        }
+    }
+}
     
 
