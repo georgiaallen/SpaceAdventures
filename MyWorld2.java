@@ -1,10 +1,11 @@
-import greenfoot.*;  
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
 /**
  * Class for Mission 2 gameplay
  * 
- * @author (Georgia) 
- * 
+ * Author: Libby
  */
+
 public class MyWorld2 extends World
 {
 public healthBar healthbar; //healthabar institiated here so can be referenced in astronaut class
