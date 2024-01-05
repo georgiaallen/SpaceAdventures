@@ -1,10 +1,11 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  // Import necessary Greenfoot classes
 
 /**
- * Write a description of class Star here.
+ * Star class represents a star in the Greenfoot scenario.
+ * This class extends the Actor class, which is the base class for all actors in Greenfoot.
+ * It means that objects of the Star class can be added to the world and will be displayed.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Libby
  */
 public class Star extends Actor
 {
@@ -14,16 +15,25 @@ public class Star extends Actor
      */
     public void act()
     {
-        
+        // Check if the right arrow key is pressed
         if(Greenfoot.isKeyDown("right"))
         {
+            // Move the star to the left (negative x direction)
             move(-4);
         }
+        
+        // Check if the left arrow key is pressed
         if(Greenfoot.isKeyDown("left"))
         {
+            // Move the star to the right (positive x direction)
             move(4);
         }
+        
+        // Check if the star has reached the left edge of the world
         if (getX() == 0)
         {
-            setLocation(getWorld().getWidth()-1, Greenfoot.getRandomNumber(600)+100);
-}}}
+            // Wrap around to the right edge and reposition vertically with a random Y-coordinate
+            setLocation(getWorld().getWidth() - 1, Greenfoot.getRandomNumber(600) + 100);
+        }
+    }
+}
