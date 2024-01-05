@@ -4,6 +4,8 @@ import greenfoot.*;  // Import necessary Greenfoot classes
  * Meteor class represents a meteor in the Greenfoot scenario.
  * This class extends the Actor class, which is the base class for all actors in Greenfoot.
  * It means that objects of the Meteor class can be added to the world and will be displayed.
+ * 
+ * @author (Libby) 
  */
 
 public class Meteor extends Actor
