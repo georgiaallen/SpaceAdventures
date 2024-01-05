@@ -1,4 +1,4 @@
-import greenfoot.*;  // Import necessary Greenfoot classes
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Rocket2 class represents a rocket in the Greenfoot scenario.
