@@ -1,10 +1,11 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  // Import necessary Greenfoot classes
 
 /**
- * Write a description of class Rocket2 here.
+ * Rocket2 class represents a rocket in the Greenfoot scenario.
+ * This class extends the Actor class, which is the base class for all actors in Greenfoot.
+ * It means that objects of the Rocket2 class can be added to the world and will be displayed.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Author: Libby
  */
 public class Rocket2 extends Actor
 {
@@ -15,5 +16,8 @@ public class Rocket2 extends Actor
     public void act()
     {
         // Add your action code here.
+        // This is where you define the behavior of the Rocket2 when it acts in the scenario.
+        // You can add code to make the Rocket2 move, check for collisions, respond to user input, etc.
+        // This method is automatically called by Greenfoot when the 'Act' or 'Run' button is pressed.
     }
 }
