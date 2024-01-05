@@ -5,7 +5,7 @@ import greenfoot.*;  // Import necessary Greenfoot classes
  * This class extends the Actor class, which is the base class for all actors in Greenfoot.
  * It means that objects of the Star class can be added to the world and will be displayed.
  * 
- * @author Libby
+ * Author: Libby
  */
 public class Star extends Actor
 {
