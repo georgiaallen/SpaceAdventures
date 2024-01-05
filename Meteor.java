@@ -1,4 +1,4 @@
-import greenfoot.*;  // Import necessary Greenfoot classes
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Meteor class represents a meteor in the Greenfoot scenario.
