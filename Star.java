@@ -1,4 +1,4 @@
-import greenfoot.*;  // Import necessary Greenfoot classes
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Star class represents a star in the Greenfoot scenario.
