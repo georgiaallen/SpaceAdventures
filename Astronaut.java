@@ -1,30 +1,36 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Astronaut here.
+ * The Astronaut class represents the player's character in the game.
+ * It handles movement, collision detection with meteors and stars,
+ * and implements actions related to the game's objectives.
  * 
- * @author (your name) 
+ * @author (Saharsh) 
  * @version (a version number or a date)
  */
 public class Astronaut extends Actor
 {
-    
+    // Track collisions with meteor and star 
     boolean touchingMeteor = false;
     boolean touchingStar = false;
     boolean TenStarsCollected = false;
+
+    // Variables for movement and gravity 
     private int speed = 7;
     private int vSpeed = 0;
     private int gravity = 2;
     
-    // time an astronout has to move away from metor before health reduces again
+    // Time an astronout has to move away from metor before health reduces again
     private final int COLLISION_TIMEOUT = 100;
     public int collisionTimer = 0;
-    
+
+    // Reference to my world 
     private MyWorld myworld;
   
     //NOTE: not needed
     //private healthBar healthBar;
-    
+
+    // Constuctor for the astronaut class 
     public Astronaut(MyWorld myworld) {
         this.myworld = myworld;
     }
@@ -34,13 +40,19 @@ public class Astronaut extends Actor
 //        this.healthBar = healthBar;
 //    }
 
+    /**
+     * The main act method, called during every frame update.
+     * It handles movement, collision detection, and game objectives.
+     */
     public void act() {
         move();
         fall();
         hitMeteor();
         hitStar();
         Mission2();
-          if (onGround()) {
+         
+        // Checking if the astronaut is on the floor and ending game if they are 
+        if (onGround()) {
           Greenfoot.setWorld(new GameOver());
                 Greenfoot.stop();
         }
@@ -50,13 +62,17 @@ public class Astronaut extends Actor
 //        myworld = world;  
 //    }
   
-
+/**
+     * Checks if the astronaut is on the ground.
+     * 
+     * @return True if the astronaut is on the ground, false otherwise.
+     */
     public boolean onGround() {
         Actor under = getOneObjectAtOffset(0, getImage().getHeight() / 16, Ground.class);
         return under != null;
         
            }
-    
+    // Handles user input for movement 
   public void move()
     {
         
@@ -90,7 +106,7 @@ public class Astronaut extends Actor
 }
 
     
-
+// Handles collisions with meteors and then changes the health 
  public void hitMeteor() {
     //healthBar healthbar2 = myworld.getheHealthBar();
     //healthbar2.loseHealth();
@@ -98,12 +114,12 @@ public class Astronaut extends Actor
     Actor meteor = getOneIntersectingObject(Meteor.class);
     
     
-    // astronaut is overlapping with a meteor
+    // Astronaut is overlapping with a meteor
     if (meteor != null) {
         if (this.collisionTimer == 0) {
             // decrease health on the world healthbar
             myworld.healthbar.loseHealth();
-        
+        // End game if health reaches zero 
             if (myworld.healthbar.getHealth() <= 0) {
                 
                 Greenfoot.setWorld(new GameOver());
@@ -117,25 +133,17 @@ public class Astronaut extends Actor
             this.collisionTimer = this.collisionTimer - 1;
         }
     } else {
+
+        // Reset collision timer if no collision 
         this.collisionTimer = COLLISION_TIMEOUT;
     }
       
-    
-    /*
-    if (!touchingMeteor) {
-        if (healthBar != null) {
-            myworld.healthbar.loseHealth();
-        
-            touchingMeteor = true;
-            if (healthbar2.getHealth() <= 0) {
-                System.out.println("Game Over!");
-                Greenfoot.stop();
-            }
-        }
-    } else {
-        touchingMeteor = false;
-    }
-    */
+
+
+     /**
+     * Handles collision with stars and updates the score.
+     * Also triggers additional actions when certain conditions are met.
+     */
 }
 public void hitStar() {
     //healthBar healthbar2 = myworld.getheHealthBar();
@@ -145,10 +153,15 @@ public void hitStar() {
     
     // astronaut is overlapping with a meteor
     if (star != null) {
+
+        //Increase score on the world counter 
         
             // decrease health on the world healthbar
             myworld.counter.addScore();
+        // Remove collected star 
         getWorld().removeObject(star);
+
+        // Check if 10 stars are collected to proceed to the next level 
         if(myworld.counter.getScore()>=10 && TenStarsCollected==false)
         {
             getWorld().addObject(new Rocket(), 2936, 366);
@@ -156,7 +169,11 @@ public void hitStar() {
         }
     }
     }
-            
+  
+    
+    /**
+     * Checks for collision with a rocket, triggering a world transition.
+     */         
      public void Mission2(){
          Actor rocket = getOneIntersectingObject(Rocket.class);
     
@@ -167,6 +184,10 @@ public void hitStar() {
      }
        
     }
+
+    /**
+     * Handles the falling of the astronaut due to gravity.
+     */
 public void fall(){
     
         setLocation (getX(),getY()+ vSpeed);
