@@ -144,8 +144,6 @@ public void hitStar() {
     if (star != null) {
 
         //Increase score on the world counter 
-        
-            // decrease health on the world healthbar
             myworld.counter.addScore();
         // Remove collected star 
         getWorld().removeObject(star);
