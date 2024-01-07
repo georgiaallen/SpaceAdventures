@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Ground extends Actor{
  
-   // The main method, it handles keyboard input for movement 
+   // The main method, it handles keyboard input for movement
+ // This allows the ground to move along the screen as the player moves
     public void act(){
          if(Greenfoot.isKeyDown("right"))
         {
