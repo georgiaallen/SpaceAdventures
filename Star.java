@@ -30,7 +30,7 @@ public class Star extends Actor
         // Check if the star has reached the left edge of the world
         if (getX() == 0)
         {
-            // 
+            //  Reposition stars on screen in random formations as they reach the edge of the world
             setLocation(getWorld().getWidth() - 1, Greenfoot.getRandomNumber(600) + 100);
         }
     }
