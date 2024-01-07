@@ -101,8 +101,7 @@ public class Astronaut extends Actor
     
 // Handles collisions with meteors and then changes the health 
  public void hitMeteor() {
-    //healthBar healthbar2 = myworld.getheHealthBar();
-    //healthbar2.loseHealth();
+   
     
     Actor meteor = getOneIntersectingObject(Meteor.class);
     
