@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class MyWorld2 extends World
 {
-public healthBar healthbar; //healthabar institiated here so can be referenced in astronaut class
-    public Counter counter;//counter institiated here so can be referenced in astronaut class
+public healthBar healthbar; //healthabar institiated here so can be referenced in astronaut2 class
+    public Counter counter;//counter institiated here so can be referenced in UFO2 class
     public healthBar2 healthbar2;//healthabar2 institiated here so can be referenced in astronaut2 class
   
     public MyWorld2()
@@ -33,14 +33,15 @@ private void populate(){
     int randomX = Greenfoot.getRandomNumber(getWidth());
     int randomY = Greenfoot.getRandomNumber(getHeight());
     addObject(new Meteor(), randomX, randomY);
-}}//population of meteor class in random formation 
+}}// population of meteor class in random formation 
 
 private void populate2(){
         for (int i = 0; i < 17; i++) {
     int randomX = Greenfoot.getRandomNumber(getWidth());
     int randomY = Greenfoot.getRandomNumber(getHeight());
     addObject(new Star(), randomX, randomY);
-}}//population of star class in random formation 
+}} //population of star class in random formation 
+    
 private void prepare() {
         Astronaut2 astronaut2 = new Astronaut2(this);
         addObject(astronaut2, 475, 359);
@@ -57,7 +58,7 @@ private void prepare() {
         Counter counter = new Counter();
         this.counter = counter;
         addObject(counter, 192, 48);
-    }//population of each actor and their set location in MyWorld2
+    } //population of each actor and their set location in MyWorld2
 
     
 }
