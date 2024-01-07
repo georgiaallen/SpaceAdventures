@@ -49,7 +49,6 @@ public class UFO extends Actor
 
     /**
      * Check if the UFO is on the ground.
-     * True if the UFO is on the ground, false otherwise.
      */
     public boolean onGround() {
         Actor under = getOneObjectAtOffset(0, getImage().getHeight() / 16, Ground.class);
