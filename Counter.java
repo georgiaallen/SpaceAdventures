@@ -9,11 +9,11 @@ import greenfoot.Color;
 public class Counter extends Actor
 {
 
-    // This is the current score 
+    // This is the current score at the beginning of the game
     int score = 0;
      
     // Main method, it will update the score on the score counter 
-    //It dynamically refreshes the score display and responds to keyboard input for horizontal movement.
+    // It refreshes the score display and responds to keyboard input for horizontal movement to create a scrolling effect
     public void act()
     {
         setImage(new GreenfootImage("Score: " + score, 24 , Color.WHITE, Color.BLUE));
