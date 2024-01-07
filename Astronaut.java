@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * and implements actions related to the game's objectives.
  * 
  * @author (Saharsh) 
- * @version (a version number or a date)
+ * 
  */
 public class Astronaut extends Actor
 {
