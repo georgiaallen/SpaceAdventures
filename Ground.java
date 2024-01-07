@@ -1,14 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Ground here.
+ * The ground class represents the ground in game 
+ * It inherits the actor class and is responsible for actions related to the ground such as when a actor touches the ground
+ * @author (Saharsh) 
  * 
- * @author (your name) 
- * @version (a version number or a date)
  */
 public class Ground extends Actor{
  
-
+   // The main method, it handles keyboard input for movement 
     public void act(){
          if(Greenfoot.isKeyDown("right"))
         {
