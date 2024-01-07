@@ -31,19 +31,14 @@ public class Astronaut2 extends Actor
     
     private MyWorld2 myworld2;
   
-    //NOTE: not needed
-    //private healthBar healthBar;
-    // Referecning back to the world 
+    
     
     // Constructor for the Astronaut2 class 
     public Astronaut2(MyWorld2 myworld2) {
         this.myworld2 = myworld2;
     }
 
-//NOTE: Don't have two Astronaut() constructors
-//public Astronaut(healthBar healthBar) {
-//        this.healthBar = healthBar;
-//    }
+
 
 
     // The main method 
@@ -61,10 +56,7 @@ public class Astronaut2 extends Actor
                 Greenfoot.stop();
         }
     }
-//NOTE: not needed, doesn't accomplish anything
-//     public void setMyWorld(MyWorld world) {
-//        myworld = world;  
-//    }
+
   
 
     /*
@@ -141,21 +133,7 @@ public class Astronaut2 extends Actor
     }
       
     
-    /*
-    if (!touchingMeteor) {
-        if (healthBar != null) {
-            myworld.healthbar.loseHealth();
-        
-            touchingMeteor = true;
-            if (healthbar2.getHealth() <= 0) {
-                System.out.println("Game Over!");
-                Greenfoot.stop();
-            }
-        }
-    } else {
-        touchingMeteor = false;
-    }
-    */
+   
 }
 
 // Handles collison with stars     
