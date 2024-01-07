@@ -11,6 +11,8 @@ public class Star extends Actor
     
     public void act()
     {
+        // Repositions stars when they reach the edge of the screen to create a scrolling effect on the gameplay as the charcters move in the game.
+        
         // Check if the right arrow key is pressed
         if(Greenfoot.isKeyDown("right"))
         {
