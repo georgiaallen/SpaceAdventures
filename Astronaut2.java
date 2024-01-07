@@ -10,11 +10,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Astronaut2 extends Actor
 {
-    /**
-     * Act - do whatever the Astronaut2 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-
+   
     // Tracks collisions with meteors and stars 
     boolean touchingMeteor = false;
     boolean touchingStar = false;
