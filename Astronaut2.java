@@ -1,9 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Astronaut2 here.
+ * The Astronaut2 class represents the player's character in the second level of the game.
+ * It handles movement, collision detection with meteors and stars,
+ * and implements actions related to the game's objectives for the second level.
  * 
- * @author (your name) 
+ * @author (Saharsh) 
  * @version (a version number or a date)
  */
 public class Astronaut2 extends Actor
@@ -12,9 +14,13 @@ public class Astronaut2 extends Actor
      * Act - do whatever the Astronaut2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+
+    // Tracks collisions with meteors and stars 
     boolean touchingMeteor = false;
     boolean touchingStar = false;
     boolean FifteenStarsCollected = false;
+    
+    // Varibales for movement and gravity
     private int speed = 7;
     private int vSpeed = 0;
     private int gravity = 2;
@@ -27,7 +33,9 @@ public class Astronaut2 extends Actor
   
     //NOTE: not needed
     //private healthBar healthBar;
+    // Referecning back to the world 
     
+    // Constructor for the Astronaut2 class 
     public Astronaut2(MyWorld2 myworld2) {
         this.myworld2 = myworld2;
     }
@@ -37,13 +45,18 @@ public class Astronaut2 extends Actor
 //        this.healthBar = healthBar;
 //    }
 
+
+    // The main method 
+    // Handles movement, collision, and the game objectives bro
     public void act() {
         move();
         fall();
         hitMeteor();
         hitStar();
         YouWin();
-          if (onGround()) {
+         
+        // Check if the astronaut is on the ground and if on the ground end the game and transfer to the game over screen
+        if (onGround()) {
           Greenfoot.setWorld(new GameOver());
                 Greenfoot.stop();
         }
@@ -54,12 +67,16 @@ public class Astronaut2 extends Actor
 //    }
   
 
+    /*
+    * Checks if the astronuat on the ground 
+    * Return True if the astronaut if on the ground otherwise will be false
+    */
     public boolean onGround() {
         Actor under = getOneObjectAtOffset(0, getImage().getHeight() / 16, Ground.class);
         return under != null;
         
            }
-    
+    // Handles user input for movement 
   public void move()
     {
         
@@ -93,7 +110,7 @@ public class Astronaut2 extends Actor
 }
 
     
-
+// Handles collison with meteors and then changes health accordingly 
  public void hitMeteor() {
     //healthBar healthbar2 = myworld.getheHealthBar();
     //healthbar2.loseHealth();
@@ -140,6 +157,8 @@ public class Astronaut2 extends Actor
     }
     */
 }
+
+// Handles collison with stars     
 public void hitStar() {
     //healthBar healthbar2 = myworld.getheHealthBar();
     //healthbar2.loseHealth();
@@ -151,7 +170,10 @@ public void hitStar() {
         
             // decrease health on the world healthbar
             myworld2.counter.addScore();
+        // Remove collected star 
         getWorld().removeObject(star);
+      
+      // Checks if the astronaut has collected 15 stars this will allow for the next action to happen 
         if(myworld2.counter.getScore()>=15 && FifteenStarsCollected==false)
         {
             getWorld().addObject(new Rocket2(), 2936, 366);
@@ -159,7 +181,9 @@ public void hitStar() {
         }
     }
     }
-   public void YouWin(){
+ 
+    // Cheks for collison with a rocket, triggering a world transformation(YouWin screen) 
+    public void YouWin(){
          Actor rocket2 = getOneIntersectingObject(Rocket2.class);
     
     if (rocket2 != null) {
@@ -169,7 +193,9 @@ public void hitStar() {
      }
        
     }
-public void fall(){
+
+    // Handles the falling off the astronaut due to gravity. 
+     public void fall(){
     
         setLocation (getX(),getY()+ vSpeed);
             vSpeed = gravity;
