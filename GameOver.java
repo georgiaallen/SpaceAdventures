@@ -11,7 +11,7 @@ public class GameOver extends World
     // Constructor for the GameOver class 
     public GameOver()
     {    
-        // Sets the dimenions of the game over screen that will appear when certain objectives are met
+        // Sets the dimenions of the game over screen that will appear when the character loses in the game
         super(3000, 700, 1); //screen size
     }
 }
