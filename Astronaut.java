@@ -140,8 +140,7 @@ public class Astronaut extends Actor
 public void hitStar() {
    
     Actor star = getOneIntersectingObject(Star.class);
-    
-    // astronaut is overlapping with a meteor
+    // check if astronaut is overlapping with a star
     if (star != null) {
 
         //Increase score on the world counter 
