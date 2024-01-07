@@ -1,20 +1,25 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import greenfoot.Color;
 /**
- * Write a description of class Counter here.
+ * The counter class represents the score counter for stars collected in the game
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Saharsh) 
+ * 
  */
 public class Counter extends Actor
 {
+
+    // This is the current score 
     int score = 0;
      
-
+    // Main method, it will update the score on the score counter 
+    //It dynamically refreshes the score display and responds to keyboard input for horizontal movement.
     public void act()
     {
         setImage(new GreenfootImage("Score: " + score, 24 , Color.WHITE, Color.BLUE));
- if(Greenfoot.isKeyDown("right"))
+
+        // Move the counter left or right based on keyboard input
+        if(Greenfoot.isKeyDown("right"))
         {
             move(3);
         }
@@ -24,9 +29,13 @@ public class Counter extends Actor
         }
         
     }
+
+    // Increases the score by one 
     public void addScore(){
         score++;
     }
+
+    // Gets the current score 
     public int getScore(){
         return score;
     }
