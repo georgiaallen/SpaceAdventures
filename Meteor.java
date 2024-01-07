@@ -32,7 +32,7 @@ public class Meteor extends Actor
         // Check if the meteor has reached the left edge of the world
         if (getX() == 0)
         {
-            // Reposition meteor on screen in random formation as it reaches edge of world
+            // Reposition meteors on screen in random formation as they reach the edge of the world
             setLocation(getWorld().getWidth() - 1, Greenfoot.getRandomNumber(365) + 100);
         }
     }
