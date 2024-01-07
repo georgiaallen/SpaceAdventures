@@ -27,18 +27,14 @@ public class Astronaut extends Actor
     // Reference to my world 
     private MyWorld myworld;
   
-    //NOTE: not needed
-    //private healthBar healthBar;
+    
 
     // Constuctor for the astronaut class 
     public Astronaut(MyWorld myworld) {
         this.myworld = myworld;
     }
 
-//NOTE: Don't have two Astronaut() constructors
-//public Astronaut(healthBar healthBar) {
-//        this.healthBar = healthBar;
-//    }
+
 
     /**
      * The main act method, called during every frame update.
@@ -57,10 +53,7 @@ public class Astronaut extends Actor
                 Greenfoot.stop();
         }
     }
-//NOTE: not needed, doesn't accomplish anything
-//     public void setMyWorld(MyWorld world) {
-//        myworld = world;  
-//    }
+
   
 /**
      * Checks if the astronaut is on the ground.
