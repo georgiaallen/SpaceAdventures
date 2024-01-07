@@ -9,15 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Rocket extends Actor
 {
-    /**
-     * Act - do whatever the Rocket wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    
     public void act()
     {
-        // Add your action code here.
-        // This is where you define the behavior of the Rocket when it acts in the scenario.
-        // You can add code to make the Rocket move, check for collisions, respond to user input, etc.
-        // This method is automatically called by Greenfoot when the 'Act' or 'Run' button is pressed.
+       
     }
 }
