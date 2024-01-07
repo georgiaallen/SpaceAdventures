@@ -13,7 +13,7 @@ public class Mission1 extends World
     {    
         super(3000, 700, 1);//screen size
     }
-    // The main method, checks if the space bar is pressed to transition to myWorld
+    // The main method, checks if the space bar is pressed to transition to MyWorld
     public void act(){
         if(Greenfoot.isKeyDown("space")){
     //when player presses space this will move screen to MyWorld so Mission 1 gameplay can commence
