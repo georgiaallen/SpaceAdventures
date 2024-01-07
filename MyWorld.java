@@ -32,14 +32,14 @@ public class MyWorld extends World {
     int randomX = Greenfoot.getRandomNumber(getWidth());
     int randomY = Greenfoot.getRandomNumber(getHeight());
     addObject(new Meteor(), randomX, randomY);
-}}//population of meteor class in random formation 
+}} //population of meteor class in random formation 
 
 private void populate2(){
         for (int i = 0; i < 14; i++) {
     int randomX = Greenfoot.getRandomNumber(getWidth());
     int randomY = Greenfoot.getRandomNumber(getHeight());
     addObject(new Star(), randomX, randomY);
-}}//population of star class in random formation
+}} //population of star class in random formation
 
     private void prepare() {
         Astronaut astronaut = new Astronaut(this);
@@ -57,7 +57,7 @@ private void populate2(){
         Counter counter = new Counter();
         this.counter = counter;
         addObject(counter, 192, 48);
-    }//population of each actor and their set location in MyWorld
+    } //population of each actor and their set location in MyWorld
 
     
 }
