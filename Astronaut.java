@@ -148,7 +148,7 @@ public void hitStar() {
         // Remove collected star 
         getWorld().removeObject(star);
 
-        // Check if 10 stars are collected to proceed to the next level 
+        // Check if 10 stars are collected to trigger appearance of rocket class
         if(myworld.counter.getScore()>=10 && TenStarsCollected==false)
         {
             getWorld().addObject(new Rocket(), 2936, 366);
