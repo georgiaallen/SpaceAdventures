@@ -24,7 +24,8 @@ public class Astronaut2 extends Actor
     // time an astronout has to move away from metor before health reduces again
     private final int COLLISION_TIMEOUT = 100;
     public int collisionTimer = 0;
-    
+   
+    // Reference to MyWorld2 
     private MyWorld2 myworld2;
   
     
@@ -38,7 +39,7 @@ public class Astronaut2 extends Actor
 
 
     // The main method 
-    // Handles movement, collision, and the game objectives bro
+    // Handles movement, collision, and the game objectives 
     public void act() {
         move();
         fall();
@@ -46,7 +47,7 @@ public class Astronaut2 extends Actor
         hitStar();
         YouWin();
          
-        // Check if the astronaut is on the ground and if on the ground end the game and transfer to the game over screen
+        // Check if the astronaut is on the ground and if on the ground, end the game and transfer to the game over screen
         if (onGround()) {
           Greenfoot.setWorld(new GameOver());
                 Greenfoot.stop();
@@ -64,7 +65,7 @@ public class Astronaut2 extends Actor
         return under != null;
         
            }
-    // Handles user input for movement 
+    // Handles user input for movement - arrow keys
   public void move()
     {
         
@@ -100,13 +101,11 @@ public class Astronaut2 extends Actor
     
 // Handles collison with meteors and then changes health accordingly 
  public void hitMeteor() {
-    //healthBar healthbar2 = myworld.getheHealthBar();
-    //healthbar2.loseHealth();
+   
     
     Actor meteor = getOneIntersectingObject(Meteor.class);
     
-    
-    // astronaut is overlapping with a meteor
+    // check if astronaut is overlapping with a meteor
     if (meteor != null) {
         if (this.collisionTimer == 0) {
             // decrease health on the world healthbar
@@ -134,20 +133,19 @@ public class Astronaut2 extends Actor
 
 // Handles collison with stars     
 public void hitStar() {
-    //healthBar healthbar2 = myworld.getheHealthBar();
-    //healthbar2.loseHealth();
+    
     
     Actor star = getOneIntersectingObject(Star.class);
     
-    // astronaut is overlapping with a meteor
+    // check if astronaut is overlapping with a star
     if (star != null) {
         
-            // decrease health on the world healthbar
+            // Increase score by 1
             myworld2.counter.addScore();
         // Remove collected star 
         getWorld().removeObject(star);
       
-      // Checks if the astronaut has collected 15 stars this will allow for the next action to happen 
+      // Checks if the astronaut has collected 15 stars this will allow for appearance of rocket image on screen
         if(myworld2.counter.getScore()>=15 && FifteenStarsCollected==false)
         {
             getWorld().addObject(new Rocket2(), 2936, 366);
@@ -156,7 +154,7 @@ public void hitStar() {
     }
     }
  
-    // Cheks for collison with a rocket, triggering a world transformation(YouWin screen) 
+    // Checks for collison with a rocket, triggering a world transformation (YouWin screen) 
     public void YouWin(){
          Actor rocket2 = getOneIntersectingObject(Rocket2.class);
     
