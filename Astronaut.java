@@ -138,9 +138,7 @@ public class Astronaut extends Actor
      */
 }
 public void hitStar() {
-    //healthBar healthbar2 = myworld.getheHealthBar();
-    //healthbar2.loseHealth();
-    
+   
     Actor star = getOneIntersectingObject(Star.class);
     
     // astronaut is overlapping with a meteor
