@@ -9,8 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld2 extends World
 {
 public healthBar healthbar; //healthabar institiated here so can be referenced in astronaut2 class
-    public Counter counter;//counter institiated here so can be referenced in UFO2 class
-    public healthBar2 healthbar2;//healthabar2 institiated here so can be referenced in astronaut2 class
+    public Counter counter;//counter institiated here so can be referenced in astronaut2 class
+    public healthBar2 healthbar2;//healthabar2 institiated here so can be referenced in UFO2 class
   
     public MyWorld2()
     {    
