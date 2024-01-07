@@ -145,7 +145,7 @@ public void hitStar() {
         // Remove collected star 
         getWorld().removeObject(star);
       
-      // Checks if the astronaut has collected 15 stars this will allow for appearance of rocket image on screen
+      // Checks if the astronaut has collected 15 stars this will allow for appearance of rocket class
         if(myworld2.counter.getScore()>=15 && FifteenStarsCollected==false)
         {
             getWorld().addObject(new Rocket2(), 2936, 366);
